@@ -1,0 +1,44 @@
+#personal-info {
+    padding: 100px;
+}
+
+.fab {
+    margin-right: 20px;
+}
+
+.skills-lvl {
+    margin-right: 30px;
+}
+
+.skills-lvl-android {
+    margin-top: 55px;
+}
+
+.skills-lvl-rails {
+    margin-top: 55px;
+}
+
+.skills-lvl-arduino {
+    margin-top: 55px;
+}
+
+.skills-lvl-python {
+    margin-top: 50px;
+}
+
+.skills-lvl-django {
+    margin-top: 30px;
+}
+
+.skills-lvl-html {
+    margin-top: 70px;
+}
+
+
+.skills-lvl-css {
+    margin-top: 70px;
+}
+
+.skills {
+    opacity: 0;
+}
