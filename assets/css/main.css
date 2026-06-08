@@ -156,6 +156,25 @@ h3 {
   max-width: 760px;
 }
 
+.post-figure {
+  margin: 32px 0;
+}
+
+.post-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.post-figure figcaption {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
 code {
   padding: 0.12em 0.28em;
   border-radius: 4px;

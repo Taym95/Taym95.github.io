@@ -24,6 +24,16 @@ This one is about [Servo issue #45369](https://github.com/servo/servo/issues/453
 
 The report used the `candle-repeat-var.html` testcase from [issue #45199](https://github.com/servo/servo/issues/45199). In Firefox and Chromium, memory eventually stabilized around 900 MB. In Servo nightly, the same testcase kept growing and reached around 5 GB after eight minutes.
 
+<figure class="post-figure">
+  <img src="{{ '/assets/before.png' | relative_url }}" alt="Memory usage before the Servo canvas memory leak fix">
+  <figcaption>Before the fix, memory kept growing while the canvas testcase ran.</figcaption>
+</figure>
+
+<figure class="post-figure">
+  <img src="{{ '/assets/after.png' | relative_url }}" alt="Memory usage after the Servo canvas memory leak fix">
+  <figcaption>After the fix, SpiderMonkey collected old canvas contexts sooner and memory stabilized.</figcaption>
+</figure>
+
 At first, this looked like a canvas resource not being released. But the real issue was slightly different: the release path existed, it just was not being reached soon enough.
 
 The important ownership chain looked like this:
