@@ -1,0 +1,25 @@
+title: Taym Haddadi
+description: Notes on browser engines, systems programming, and software work.
+url: "https://taym95.github.io"
+baseurl: ""
+
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+
+author:
+  name: Taym Haddadi
+  github: Taym95
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      author: Taym Haddadi
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="{{ '/' | relative_url }}">Blog</a>
+        <a href="{{ '/series/servo-generational-run/' | relative_url }}">Servo generational run</a>
+        <a href="{{ '/about/' | relative_url }}">About</a>
+        <a href="{{ '/legacy/portfolio/' | relative_url }}">Legacy</a>
+      </nav>
+    </header>
+
+    <main class="page-content">
+      {{ content }}
+    </main>
+
+    <footer class="site-footer">
+      <span>{{ site.title }}</span>
+      <a href="https://github.com/{{ site.author.github }}">GitHub</a>
+    </footer>
+  </body>
+</html>

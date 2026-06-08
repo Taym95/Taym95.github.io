@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<article class="post">
+  <header class="post-header">
+    <p class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+      {% if page.series %}<span>{{ page.series }}</span>{% endif %}
+      {% if page.issue_url %}<a href="{{ page.issue_url }}">Issue</a>{% endif %}
+      {% if page.pr_url %}<a href="{{ page.pr_url }}">PR</a>{% endif %}
+    </p>
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}<p class="lede">{{ page.description }}</p>{% endif %}
+  </header>
+
+  <div class="post-body">
+    {{ content }}
+  </div>
+</article>
