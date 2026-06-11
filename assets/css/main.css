@@ -156,6 +156,15 @@ h3 {
   max-width: 760px;
 }
 
+.post-feedback {
+  max-width: 760px;
+  margin-top: 48px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
 .post-figure {
   margin: 32px 0;
 }
